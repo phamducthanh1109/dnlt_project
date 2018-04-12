@@ -1,0 +1,164 @@
+﻿/* GLOBAL*/
+body {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/********************************************************************************************************************************************************/
+
+/* HEADER */
+.h34d3r {
+    box-sizing: border-box;
+    color: rgb(17, 17, 17);
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 62px;
+    line-height: 24px;
+    text-size-adjust: 100%;
+    width: 861px;
+}
+
+.n4v-h34d3r {
+    align-items: center;
+    background-color:black;
+    box-sizing: border-box;
+    color: rgb(17, 17, 17);
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 62px;
+    line-height: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: fixed;
+    text-size-adjust: 100%;
+    width: 100%;
+    z-index: 6;
+    -webkit-box-align: center
+}
+.l0g0 {
+    box-sizing:border-box;
+    background-color:white;
+    float:left;
+    height: 90%;
+    width: 150px;
+}
+
+.s34rch {
+    box-sizing: border-box;
+    background-color: white;
+    float: left;
+    height: 90%;
+    width: 800px;
+    margin-left:12px;
+}
+
+.c0l3ct10n {
+    box-sizing: border-box;
+    background-color: white;
+    float: right;
+    height: 90%;
+    width: 150px;
+    margin-left: 12px;
+}
+
+.us3r {
+    box-sizing: border-box;
+    background-color: white;
+    float: right;
+    height: 90%;
+    width: 150px;
+    margin-left: 12px;
+}
+
+.s3tt1ng {
+    box-sizing: border-box;
+    background-color: white;
+    float: right;
+    height: 90%;
+    width: 150px;
+    margin-left: 12px;
+}
+/********************************************************************************************************************************************************/
+/* BODY */
+
+.gl0b4l-b0dy {
+    background-color: white;
+    height: 100%;
+    max-width: 1320px;
+    margin:auto;
+    padding-left: calc(12px);
+    padding-right: calc(12px);
+    padding-top: calc(24px);
+}
+/********************************************************************************************************************************************************/
+/* MENU BAR */
+.m3nu-b4r {
+    box-sizing: border-box;
+    width: 100%;
+    height: 33px;
+    margin-bottom: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.m3nu-b4r-sp4n {
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+}
+.m3nu-b4r-c0nt3nt {
+    box-sizing:border-box;
+    float:left;
+    padding-right:24px;
+}
+
+    .m3nu-b4r-c0nt3nt a {
+        color: black;
+        text-decoration: none;
+    }
+/********************************************************************************************************************************************************/
+/* PRODUCT */
+.pr0duct-b0dy {
+}
+.product-column1 {
+    background-color: white;
+    width: calc(33.33% - 16px);
+    height: 100%;
+    margin-right: 12px;
+    float: left;
+}
+
+.product-column2 {
+    background-color: white;
+    width: calc(33.33% - 16px);
+    height: 100%;
+    margin: 0px 12px 0px 12px;
+    float: left;
+}
+
+.product-column3 {
+    background-color: white;
+    width: calc(33.33% - 16px);
+    height: 100%;
+    margin-left: 12px;
+    float: left;
+}
+
+.product-img {
+    margin-bottom: 24px;
+}
+
+/********************************************************************************************************************************************************/
+/* USER */
