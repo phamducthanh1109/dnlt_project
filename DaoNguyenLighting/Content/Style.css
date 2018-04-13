@@ -11,12 +11,10 @@ img {
     object-fit: cover;
 }
 
-/********************************************************************************************************************************************************/
+/*HEADER**************************************************************************************************************************************************/
 
-/* HEADER */
 .h34d3r {
     box-sizing: border-box;
-    color: rgb(17, 17, 17);
     display: block;
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
     font-size: 15px;
@@ -24,14 +22,14 @@ img {
     height: 62px;
     line-height: 24px;
     text-size-adjust: 100%;
-    width: 861px;
+    width: 100%;
 }
 
 .n4v-h34d3r {
+    background-color: black;
     align-items: center;
-    background-color:black;
     box-sizing: border-box;
-    color: rgb(17, 17, 17);
+    color: black;
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
     font-size: 15px;
@@ -42,18 +40,44 @@ img {
     padding-right: 12px;
     position: fixed;
     text-size-adjust: 100%;
-    width: 100%;
     z-index: 6;
-    -webkit-box-align: center
+    -webkit-box-align: center;
+
 }
+/* LOGO */
 .l0g0 {
     box-sizing:border-box;
-    background-color:white;
     float:left;
     height: 90%;
     width: 150px;
 }
+    .l0g0 a{
+        text-decoration:none;
+    }
+    .l0g0-c0nt3nt {
+        width: 100%;
+        height: 50%;
+    }
+    .l0g0-c0nt3nt p {
+        margin: 0px;
+        color: white;
+        text-align: center;
+    }
+.lgct1 {
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+}
 
+.lgct2 {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+/* SEARCH */
 .s34rch {
     box-sizing: border-box;
     background-color: white;
@@ -63,6 +87,7 @@ img {
     margin-left:12px;
 }
 
+/* COLLECTION*/
 .c0l3ct10n {
     box-sizing: border-box;
     background-color: white;
@@ -72,6 +97,7 @@ img {
     margin-left: 12px;
 }
 
+/* USER */
 .us3r {
     box-sizing: border-box;
     background-color: white;
@@ -81,6 +107,7 @@ img {
     margin-left: 12px;
 }
 
+/* SETTING */
 .s3tt1ng {
     box-sizing: border-box;
     background-color: white;
@@ -89,8 +116,7 @@ img {
     width: 150px;
     margin-left: 12px;
 }
-/********************************************************************************************************************************************************/
-/* BODY */
+/*BODY***************************************************************************************************************************************************/
 
 .gl0b4l-b0dy {
     background-color: white;
@@ -101,8 +127,8 @@ img {
     padding-right: calc(12px);
     padding-top: calc(24px);
 }
-/********************************************************************************************************************************************************/
-/* MENU BAR */
+/*MENU BAR************************************************************************************************************************************************/
+
 .m3nu-b4r {
     box-sizing: border-box;
     width: 100%;
@@ -128,8 +154,8 @@ img {
         color: black;
         text-decoration: none;
     }
-/********************************************************************************************************************************************************/
-/* PRODUCT */
+/*PRODUCT*********************************************************************************************************************************************/
+
 .pr0duct-b0dy {
 }
 .product-column1 {
