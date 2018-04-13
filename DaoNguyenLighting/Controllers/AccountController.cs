@@ -13,5 +13,9 @@ namespace DaoNguyenLighting.Controllers
         {
             return View();
         }
+
+        public JsonResult CheckValidUser() {
+
+        }
     }
 }

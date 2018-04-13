@@ -4,22 +4,37 @@
     Layout = null;
 }
 <link href="~/Content/Style.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
 
 <div class="c0nt41n3r-l0g1n">
     <div class="c0nt41n3r-r0w">
-        <form id="loginform">
+        <form id="login-form">
             <div class="f0rm-gr0up">
-                <label class="l4b3l">Email address</label>    
-                <input class="form-control" autofocus="autofocus" tabindex="1" value="" type="email" name="user[email]" id="user_email">
+                <label for="user_email">Email address</label><br />
+                <input class="f0rm-c0ntr0l" type="email" id="user_email"  value="">
             </div>
             <div class="f0rm-gr0up">
-                <label class="l4b3l">Password </label>
-                <span><a tabindex="4" href="/users/password/new">Forgot?</a></span>
-                <input class="form-control" autocomplete="off" tabindex="2" type="password" name="user[password]" id="user_password">
+                <label for="user_password">Password </label><br />
+                <input class="f0rm-c0ntr0l" type="password" id="user_password" value="">
             </div>
             <div class="f0rm-gr0up">
-                <input type="submit" name="commit" value="Login" class="btn btn-default btn-block-level" tabindex="3" data-disable-with="...">
+                <input type="submit" name="commit" value="Login" class="btn"  onclick="Login()">
             </div>
         </form>
+        <p class="l0g1n-f00t3r">
+            Don't have an account? <a >Sign Up</a>
+        </p>
+
     </div>
 </div>
+
+<script>
+    function Login() {
+        var data = $("#login-form").serialize();
+        $.ajax({
+            type: "post",
+            url: 
+
+        });
+    }
+</script>
