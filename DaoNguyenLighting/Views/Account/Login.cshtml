@@ -6,35 +6,47 @@
 <link href="~/Content/Style.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 
+@model DaoNguyenLighting.Models.User
+
 <div class="c0nt41n3r-l0g1n">
     <div class="c0nt41n3r-r0w">
-        <form id="login-form">
+        @using (Html.BeginForm("Autherize", "Account", FormMethod.Post))
+        {
             <div class="f0rm-gr0up">
                 <label for="user_email">Email address</label><br />
-                <input class="f0rm-c0ntr0l" type="email" id="user_email"  value="">
+                @Html.TextBoxFor(model => model.Email, new { @class = "f0rm-c0ntr0l", @type = "email" })
             </div>
             <div class="f0rm-gr0up">
                 <label for="user_password">Password </label><br />
-                <input class="f0rm-c0ntr0l" type="password" id="user_password" value="">
+                @Html.TextBoxFor(model => model.Password, new { @class = "f0rm-c0ntr0l", @type = "password" })
             </div>
             <div class="f0rm-gr0up">
-                <input type="submit" name="commit" value="Login" class="btn"  onclick="Login()">
+                <input type="submit" name="commit" value="Login" class="btn" onclick="Login()">
             </div>
-        </form>
+        }
         <p class="l0g1n-f00t3r">
-            Don't have an account? <a >Sign Up</a>
+            @Html.DisplayFor(model => model.LoginErrorMessage)
         </p>
-
+        <p class="l0g1n-f00t3r">
+            Don't have an account? <a>Sign Up</a>
+        </p>
     </div>
 </div>
-
+<!--
 <script>
     function Login() {
         var data = $("#login-form").serialize();
         $.ajax({
             type: "post",
-            url: 
-
+            url: "/Account/Autherize",
+            data: data,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (result) {
+                alert(result)
+            }
         });
     }
-</script>
+
+</script> 
+    -->

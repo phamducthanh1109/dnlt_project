@@ -362,3 +362,7 @@ F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\obj\Debug\DaoNguyenLighting.cspro
 F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\obj\Debug\DaoNguyenLighting.csproj.CopyComplete
 F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\obj\Debug\DaoNguyenLighting.dll
 F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\obj\Debug\DaoNguyenLighting.pdb
+F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.dll
+F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.SqlServer.dll
+F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.xml
+F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.SqlServer.xml

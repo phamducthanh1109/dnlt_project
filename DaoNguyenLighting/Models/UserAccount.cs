@@ -7,6 +7,5 @@ namespace DaoNguyenLighting.Models
 {
     public class UserAccount
     {
-
     }
 }
