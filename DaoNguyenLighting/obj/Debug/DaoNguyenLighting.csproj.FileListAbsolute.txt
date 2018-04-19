@@ -366,3 +366,7 @@ F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.dll
 F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.SqlServer.dll
 F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.xml
 F:\EPU Save\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.SqlServer.xml
+G:\1109 folder\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.dll
+G:\1109 folder\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.SqlServer.dll
+G:\1109 folder\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.xml
+G:\1109 folder\Git\dnlt_project\DaoNguyenLighting\bin\EntityFramework.SqlServer.xml

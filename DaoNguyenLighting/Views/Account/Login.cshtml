@@ -3,32 +3,38 @@
     ViewBag.Title = "Login";
     Layout = null;
 }
+
 <link href="~/Content/Style.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 
 @model DaoNguyenLighting.Models.User
 
-<div class="c0nt41n3r-l0g1n">
-    <div class="c0nt41n3r-r0w">
+<div class="c0nt41n3r l0g1n">
+    <div class="l0g02">
+        <div class="l0g0-c0nt3nt lgct1"> <p>Dao Nguyen</p></div>
+        <div class="l0g0-c0nt3nt lgct2"> <p>Lighting</p></div>
+    </div>
+
+    <div class="r0w">
         @using (Html.BeginForm("Autherize", "Account", FormMethod.Post))
         {
             <div class="f0rm-gr0up">
-                <label for="user_email">Email address</label><br />
-                @Html.TextBoxFor(model => model.Email, new { @class = "f0rm-c0ntr0l", @type = "email" })
+                <label for="user_email">Email Address</label><br />
+                @Html.TextBoxFor(model => model.Email, new { @class = "f0rm-c0ntr0l", @type = "email", @id = "user_email"})
             </div>
             <div class="f0rm-gr0up">
                 <label for="user_password">Password </label><br />
-                @Html.TextBoxFor(model => model.Password, new { @class = "f0rm-c0ntr0l", @type = "password" })
+                @Html.TextBoxFor(model => model.Password, new { @class = "f0rm-c0ntr0l", @type = "password", @id = "user_password"})
             </div>
             <div class="f0rm-gr0up">
                 <input type="submit" name="commit" value="Login" class="btn" onclick="Login()">
             </div>
         }
-        <p class="l0g1n-f00t3r">
-            @Html.DisplayFor(model => model.LoginErrorMessage)
+        <p class="f00t3r">
+            @ViewBag.Message
         </p>
-        <p class="l0g1n-f00t3r">
-            Don't have an account? <a>Sign Up</a>
+        <p class="f00t3r">
+            Don't have an account? @Html.ActionLink("Signup","Register","Account")
         </p>
     </div>
 </div>

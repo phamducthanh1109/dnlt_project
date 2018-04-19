@@ -16,15 +16,15 @@ namespace DaoNguyenLighting.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Autherize(DaoNguyenLighting.Models.User usermodel)
+        public ActionResult Autherize(User usermodel)
         {
             using (DNLTEntities db = new DNLTEntities())
             {
                 var ud = db.Users.Where(x => x.Email == usermodel.Email && x.Password == usermodel.Password).FirstOrDefault();
                 if (ud == null)
                 {
-                    usermodel.LoginErrorMessage = "Wrong Email or Password !";
-                    return View("Login", usermodel);
+                    ViewBag.Message = "Wrong Email or Password !";
+                    return View("Login");
                 }
                 else
                 {
@@ -34,6 +34,26 @@ namespace DaoNguyenLighting.Controllers
                 }
             }
         }
-     
+        public ActionResult Register()
+        {
+                return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register(User usermodel)
+        {
+            using (DNLTEntities db = new DNLTEntities())
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Users.Add(usermodel);
+                    db.SaveChanges();
+                    Session["UserID"] = usermodel.UserID;
+                }
+            }
+            ModelState.Clear();
+            return RedirectToAction("Trending", "Home");
+        }
+
     }
 }

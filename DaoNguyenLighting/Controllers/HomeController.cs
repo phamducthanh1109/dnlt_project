@@ -18,7 +18,6 @@ namespace DaoNguyenLighting.Controllers
         public ActionResult Trending()
         {
             ViewBag.Message = "Home Page";
-
             return View();
         }
         public ActionResult New()
