@@ -10,7 +10,6 @@ namespace DaoNguyenLighting.Controllers
     public class AccountController : Controller
     {
         // GET: Account
-        
         public ActionResult Login()
         {
             return View();
@@ -29,8 +28,7 @@ namespace DaoNguyenLighting.Controllers
                 else
                 {
                     Session["UserID"] = ud.UserID;
-                    return RedirectToAction("Trending", "Home");
-                   
+                    return RedirectToAction("Trending", "Home");                 
                 }
             }
         }

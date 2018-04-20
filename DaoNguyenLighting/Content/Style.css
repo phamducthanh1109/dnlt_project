@@ -12,9 +12,13 @@ body {
 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display:block;
+    object-fit:cover;
 }
 
+a {
+    text-decoration:none;
+}
 /*HEADER**************************************************************************************************************************************************/
 
 .h34d3r {
@@ -53,7 +57,7 @@ img {
     box-sizing: border-box;
     float: left;
     height: 90%;
-    width: 576px;
+    width: 150px;
     color: white;
 }
     .l0g0 a{
@@ -100,34 +104,14 @@ img {
 }
 
 /* COLLECTION*/
-.c0l3ct10n {
+.h34d3r-0pt10n1 {
     box-sizing: border-box;
-    background-color: white;
     float: right;
-    height: 90%;
-    width: 150px;
+    height: 70%;
+    width: 100px;
     margin-left: 12px;
 }
 
-/* USER */
-.us3r {
-    box-sizing: border-box;
-    background-color: white;
-    float: right;
-    height: 90%;
-    width: 150px;
-    margin-left: 12px;
-}
-
-/* SETTING */
-.s3tt1ng {
-    box-sizing: border-box;
-    background-color: white;
-    float: right;
-    height: 90%;
-    width: 150px;
-    margin-left: 12px;
-}
 /*BODY***************************************************************************************************************************************************/
 
 .gl0b4l-b0dy {
@@ -191,9 +175,14 @@ img {
     margin-left: 12px;
     float: left;
 }
+.product-cover {
+    padding-bottom: 24px;
+}
 
 .product-img {
-    margin-bottom: 24px;
+    border:1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 /*USER***************************************************************************************************************************************************/
@@ -267,18 +256,40 @@ img {
     width: 65%;
     height: 480px;
     float: left;
-    margin-top: 200px;
+    margin-top: 160px;
 }
 
 .r3g1st3r-c0v3r {
     float: left;
     height: 100%;
     width: 35%;
-    position:relative;
+    position: relative;
 }
 .r3g1st3r-1m4g3 {
     background-color: black;
     border: 1px solid black;
     height: calc(100% - 2px);
     width: calc(100% - 2px);
+   
+}
+/*MANAGER USER*/
+.sh4p3 {
+    box-sizing: border-box;
+    border-radius: 999px;
+    height: 100%;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+    .sh4p3:hover {
+        background-color: #FFFAFA;
+        color:black;
+    }
+
+.t3xt {
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 17px;
+    text-align: center;
 }
