@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Pay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Pay</h2>
+@if (Session["UserID"] == null)
+{
+    <div class="c4rt-m3ss4g3" style="width:600px"><p>You need to <a href=@Url.Action("Register", "Account") style="color:orangered">Register</a> to Pay or <a href=@Url.Action("Login", "Account") style="color:blue">Login</a> !</p></div>
+}
+else
+{
+   <div class="c4rt-m3ss4g3" style="width:600px"><p>Your order has Shipped please wait our contact !</p></div>
+}
+
+@*<div class="pay-body">
+    <div class="r0w">
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {
+            <div class="f0rm-gr0up">
+                <div class="f0rm-gr0up">
+                    <label for="user_email">Email Address</label><br />
+                    @Html.TextBoxFor(model => model.Email, new { @class = "f0rm-c0ntr0l", @type = "email", @id = "user_email" })
+                </div>
+                <div class="f0rm-gr0up">
+                    <label for="user_password">Phone</label><br />
+                    @Html.TextBoxFor(model => model.Phone, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "user_phone" })
+                </div>
+                <div class="f0rm-gr0up">
+                    <label for="user_name">Name</label><br />
+                    @Html.TextBoxFor(model => model.Name, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "user_name" })
+                </div>
+                <div class="f0rm-gr0up">
+                    <label for="user_password">Password</label><br />
+                    @Html.TextBoxFor(model => model.Password, new { @class = "f0rm-c0ntr0l", @type = "password", @id = "user_password" })
+                </div>
+
+                <div class="f0rm-gr0up">
+                    <input type="submit" name="commit" value="Signup" class="btn">
+                </div>
+            </div>
+
+        }
+    </div>
+</div>*@

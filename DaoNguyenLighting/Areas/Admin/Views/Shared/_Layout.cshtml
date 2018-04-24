@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Areas/Admin/Content/Style.css" rel="stylesheet" />
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/highcharts.js"></script>
+</head>
+<body>
+    <header class="h34d3r">
+        <nav class="n4v-h34d3r">
+                <a href="/">
+                    <div class="l0g0">
+                        <div class="l0g0-c0nt3nt lgct1"> <p>Dao Nguyen</p></div>
+                        <div class="l0g0-c0nt3nt lgct2"> <p>Lighting</p></div>
+                    </div>
+                </a>
+         
+            <div class="l0g0ut">
+                @Html.ActionLink("Logout", "Logout", "Login")
+            </div>
+           
+        </nav>
+    </header>
+    <div class="gl0b4l-b0dy">
+        <div class="b0dy-c0v3r">
+            <div class="m4n4g3r-b4r">
+                <div class="m4n4g3r-0pt10n">
+                    <a href="@Url.Action("Product", "Manage")">
+                        <div class="m4n4g3r-sh4p3">
+                            <div class="m4n4g3r-0pt10n-1m4g3">
+                                <img src="~/Areas/Admin/Image/product-icon.png" />
+                            </div>
+                            <div class="m4n4g3r-0pt10n-n4m3">
+                                <p> Products </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="m4n4g3r-0pt10n">
+                    <a href="@Url.Action("Order", "Order")">
+                        <div class="m4n4g3r-sh4p3">
+                            <div class="m4n4g3r-0pt10n-1m4g3">
+                                <img src="~/Areas/Admin/Image/cart-icon.png" />
+                            </div>
+                            <div class="m4n4g3r-0pt10n-n4m3">
+                                <p> Orders </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="m4n4g3r-0pt10n">
+                    <a href="@Url.Action("Users", "User")">
+                        <div class="m4n4g3r-sh4p3">
+                            <div class="m4n4g3r-0pt10n-1m4g3">
+                                <img src="~/Areas/Admin/Image/users-icon.png" />
+                            </div>
+                            <div class="m4n4g3r-0pt10n-n4m3">
+                                <p> Users </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="m4n4g3r-0pt10n">
+                    <a href="@Url.Action("Cash", "Cash")">
+                        <div class="m4n4g3r-sh4p3">
+                            <div class="m4n4g3r-0pt10n-1m4g3">
+                                <img src="~/Areas/Admin/Image/cash-icon.png" />
+                            </div>
+                            <div class="m4n4g3r-0pt10n-n4m3">
+                                <p> Cash Book </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="m4n4g3r-0pt10n">
+                    <a href="@Url.Action("Report", "Report", new { id = 7 })">
+                        <div class="m4n4g3r-sh4p3">
+                            <div class="m4n4g3r-0pt10n-1m4g3">
+                                <img src="~/Areas/Admin/Image/report-icon.png" />
+                            </div>
+                            <div class="m4n4g3r-0pt10n-n4m3">
+                                <p> Report </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="m4n4g3r-v13w">
+                @RenderBody()
+            </div>
+           
+        </div>
+        
+    </div>
+</body>
+</html>

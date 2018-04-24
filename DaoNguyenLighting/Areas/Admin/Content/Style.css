@@ -1,0 +1,364 @@
+﻿/* GLOBAL*/
+html {
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.f0rm-gr0up {
+    margin-bottom: 25px;
+}
+
+    .f0rm-gr0up label {
+        display: inline-flex;
+        -webkit-box-align: baseline;
+        align-items: baseline;
+        max-width: 100%;
+        margin-bottom: 5px;
+    }
+
+.f0rm-c0ntr0l {
+    display: block;
+    width: calc(100% - 26px);
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #111111;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    transition: border-color ease-in-out 0.15s;
+}
+
+.btn {
+    width: 300px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding:0px;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    border-spacing:0px;
+}
+
+th {
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+td {
+    padding:0px;
+    height:50px;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+    td img {
+        margin:auto;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        object-fit: cover;
+        overflow: hidden;
+    }
+/*HEADER**************************************************************************************************************************************************/
+
+.h34d3r {
+    box-sizing: border-box;
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 62px;
+    line-height: 24px;
+    text-size-adjust: 100%;
+    width: 100%;
+}
+
+.n4v-h34d3r {
+    background-color: black;
+    align-items: center;
+    box-sizing: border-box;
+    color: black;
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 62px;
+    line-height: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-size-adjust: 100%;
+    z-index: 6;
+    -webkit-box-align: center;
+    width: 100%;
+}
+/* LOGO */
+.l0g0 {
+    box-sizing: border-box;
+    float: left;
+    height: 90%;
+    width: 150px;
+    color: white;
+}
+
+    .l0g0 a {
+        text-decoration: none;
+    }
+
+.l0g0-c0nt3nt {
+    width: 100%;
+    height: 50%;
+}
+
+    .l0g0-c0nt3nt p {
+        margin: 0px;
+        text-align: center;
+    }
+
+.lgct1 {
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.lgct2 {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.l0g02 {
+    box-sizing: border-box;
+    height: 50px;
+    width: 576px;
+    color: black;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.l0g0ut {
+    height: 25px;
+    width: 70px;
+    margin-top: 20px;
+    float: right;
+    border:double 1px white;
+    text-align:center;
+}
+
+    .l0g0ut a {
+        text-decoration: none;
+        color: white;
+        font-weight:700;
+    }
+/*BODY***************************************************************************************************************************************************/
+
+.gl0b4l-b0dy {
+    height: 100%;
+    width: 100%;
+  
+}
+
+.b0dy-c0v3r {
+    margin: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+}
+
+/*Manager-Bar***************************************************************************************************************************************************/
+.m4n4g3r-b4r {
+    width: 300px;
+    height: 450px;
+    background-color: black;
+}
+.m4n4g3r-0pt10n {
+    width: 280px;
+    height: 50px;
+    margin: 10px;
+    border-bottom: 1px solid white;
+}
+    .m4n4g3r-0pt10n a {
+        text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 50px;
+    }
+
+.m4n4g3r-sh4p3 {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+    .m4n4g3r-sh4p3:hover {
+    background-color:orangered;
+    }
+
+.m4n4g3r-0pt10n-1m4g3 {
+    width:40px;
+    height:40px;
+    float:left;
+    margin:5px;
+}
+.m4n4g3r-0pt10n-n4m3 {
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+    .m4n4g3r-0pt10n-n4m3 p {
+        text-align: center;
+        margin: 0px;
+    }
+
+/*Manager-View***************************************************************************************************************************************************/
+.m4n4g3r-v13w {
+    width: 1100px;
+    height: 900px;
+    background-color: white;
+    margin-left: 50px;
+}
+.m4n4g3r-h34d3r {
+    width:100%;
+    height:50px;
+    background-color:black;
+}
+.m4n4g3r-h34d3r-n4m3 {
+    width:300px;
+    height:100%;
+    float:left;
+}
+    .m4n4g3r-h34d3r-n4m3 p {
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 50px;
+        margin:0px 0px 0px 8px;
+    }
+.m4n4g3r-b0dy {
+    width:100%;
+    height: 714px;
+}
+.m4n4g3r-c0v3r {
+    height:480px;
+    width:100%;
+}
+.m4n4g3r-c0v3r-1 {
+    height:100%;
+    width: 850px;
+}
+.m4n4g3r-c0v3r-2 {
+    height: 510px;
+    width: 100%;
+}
+/*Product***************************************************************************************************************************************************/
+.pr0duct-butt0n-c0v3r {
+    width: 200px;
+    height: 100%;
+    float:right;
+}
+.pr0duct-butt0n-4dd {
+    margin:5px;
+    width:190px;
+    height:40px;
+    border:1px solid black;
+    border-radius:5px;
+    background-color:white;
+}
+
+    .pr0duct-butt0n-4dd p {
+        color: black;
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 40px;
+        margin:0px;
+        text-align:center;
+    }
+
+    .pr0duct-butt0n-4dd:hover {
+        background-color: #DCDCDC;
+    }
+
+.pr0duct-4dd-1m4g3-butt0n {
+    height: 350px;
+    width: 350px;
+    border: 2px dashed black;
+    margin: 30px;
+    margin-top:60px;
+    float: left;
+}
+    .pr0duct-4dd-1m4g3-butt0n h1 {
+        text-align: center;
+        margin-top: 156px;
+        margin-bottom: 156px;
+    }
+.butt0n-styl3 {
+    position:absolute;
+    top:204px;
+    left:412px;
+    height:350px;
+    width:350px;
+    opacity:0;
+}
+
+.pr0duct-4dd-c0nt3nt {
+    height: 350px;
+    width: 300px;
+    margin-left:100px;
+    margin-top:50px;
+    float:left;
+}
+/*Edit***************************************************************************************************************************/
+.f0rm-h0r1z0n4l {
+    width:100%;
+    height:100%;
+}
+
+.pr0duct-3d1t-1 {
+    width:300px;
+    height: 455px;
+    margin:auto;
+    margin-top:10px;
+}
+/*Order**************************************************************************************************************************************************/
+.Us3r-0rd3r-b0dy{
+    margin-top:30px;
+    width:100%;
+    height:110px;
+}/*Cash***************************************************************************************************************************************************/
+.c4sh-4dd-c0nt3nt {
+    height: 100%;
+    width: 300px;
+    margin: auto;
+    margin-top:10px;
+}

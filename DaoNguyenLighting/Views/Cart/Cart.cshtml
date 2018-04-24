@@ -1,0 +1,136 @@
+﻿@using DaoNguyenLighting.Models;
+@using System.Configuration;
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cart </h2>
+@{
+    List<CartItem> list = (List<CartItem>)Session["CartSession"];
+    
+}
+
+@if (list != null)
+{
+    if (list.Count() != 0)
+    {
+        <table cellspacing="0">
+            <tr>
+                <th>Image</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Option</th>
+            </tr>
+
+            @using (Html.BeginForm("Update", "Cart", FormMethod.Post, new { @id = "updateform" }))
+            {
+                for (int i = 0; i < list.Count(); i++)
+                {
+                    <tr>
+                        <td style="width:150px"><img src='@list[i].Product.ImagePath' /></td>
+                        <td>@list[i].Product.ProductCode</td>
+                        <td>@list[i].Product.ProductName</td>
+                        <td id="td-@i">@list[i].Product.ProductPrice</td>
+                        <td id="qp-@i"><input type="number" name="quantity" value="@list[i].Quantity" class="chk" style="text-align:center" /></td>
+                        <td id="pt-@i">@(String.Format("{0:N0}", list[i].Product.ProductPrice * list[i].Quantity))</td>
+                        <td> @Html.ActionLink("Delete", "Delete", new { id = @list[i].Product.ProductID })</td>
+                    </tr>
+
+                }
+
+            }
+            @using (Html.BeginForm("Pay", "Cart", FormMethod.Post, new { @id = "payform" }))
+            {
+                for (int i = 0; i < list.Count(); i++)
+                {
+                    <tr style="display:none">
+                        <td style="display:none">
+                            <input type="hidden" name="price" value="@list[i].Product.ProductPrice" />
+                        </td>
+                        <td style="display:none">
+                            <input type="hidden" name="quantity" value="@list[i].Quantity" />
+                        </td>
+                    </tr>
+
+                }
+            }
+
+            <tr>
+                <td colspan="5" style="height:50px;">Total</td>
+                <td style="height:50px">
+                    @{ var total = String.Format("{0:N0}", list.Sum(x => x.Quantity * x.Product.ProductPrice)); }
+                    <input type="text" name="total" value="@total" readonly id="tt" style="text-align:center" />
+                </td>
+                <td style="height:50px">
+                    <form action="@ConfigurationManager.AppSettings["urlSubmitPayment"]" method="post" id="paypalform" target="_blank">
+                        <input type="hidden" name="cmd" value="_cart" />
+                        <input type="hidden" name="upload" value="1" />
+                        <input type="hidden" name="return" value="@ConfigurationManager.AppSettings["urlReturn"]" />
+                        <input type="hidden" name="business" value="@ConfigurationManager.AppSettings["accountBusiness"]" />
+
+
+                        @for (int i = 0; i < list.Count(); i++)
+                        {
+                            decimal usd = Convert.ToDecimal(list[i].Product.ProductPrice) / 22727;
+                            <input type="hidden" name="@Url.Content("item_name_"+(i+1))" value="@list[i].Product.ProductCode" />
+                            <input type="hidden" name="@Url.Content("amount_"+(i+1))" value=@usd />
+                            <input type="hidden" name="@Url.Content("quantity_"+(i+1))" value=@list[i].Quantity />
+                        }
+                        <input type="button" value="Pay" class="btn" id="paypalbtn" />
+                    </form>
+                </td>
+            </tr>
+
+        </table>
+
+    }
+
+    <script>
+
+    $('.chk').change(function () {abc()});
+    function abc() {
+        var value = 0;
+         for (i = 0; i < @list.Count(); i++)
+         {
+               var qp = "#qp-" + i
+               var td = "#td-" + i
+               var pt = "#pt-" + i
+                    var price = $(td).text()
+                    var quantity = $(qp).find('input').val()
+             var totalP = price * quantity
+             var total = value+= totalP
+             $(pt).html(totalP.toLocaleString('en'))
+             $('#tt').val(total.toLocaleString('en'))
+        }
+        $('#updateform').submit();
+    }
+
+        $("#paypalbtn").click(function () {
+            @if (Session["UserID"] == null) {
+                <text>
+                window.open("/Cart/Pay");
+                </text>
+            }
+            else
+            {
+                <text>
+                $("#paypalform").submit();
+                setTimeout(test, 1000);
+                </text>
+
+            };
+        });
+        function test() {
+        $("#payform").submit();
+        }
+    </script>
+
+}
+else
+{<div class="c4rt-m3ss4g3"><p>Cart is empty!</p></div>}
+

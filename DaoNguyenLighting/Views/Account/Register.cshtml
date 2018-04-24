@@ -1,4 +1,4 @@
-﻿
+﻿@model DaoNguyenLighting.Models.User
 @{
     ViewBag.Title = "Register";
     Layout = null;
@@ -7,7 +7,7 @@
 <link href="~/Content/Style.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
-@model DaoNguyenLighting.Models.User
+
 <div class="c0nt41n3r">
     <div class=" r3g1st3r">
         <a href="/">
@@ -16,39 +16,39 @@
                 <div class="l0g0-c0nt3nt lgct2"> <p>Lighting</p></div>
             </div>
         </a>
-       
-        <div class="r0w">
-        @using (Html.BeginForm("Register","Account",FormMethod.Post))
-         {
-            <div class="f0rm-gr0up">
-                <div class="f0rm-gr0up">
-                    <label for="user_email">Email Address</label><br />
-                    @Html.TextBoxFor(model => model.Email, new { @class = "f0rm-c0ntr0l", @type = "email", @id = "user_email" })
-                </div>
-                 <div class="f0rm-gr0up">
-                    <label for="user_password">Phone</label><br />
-                    @Html.TextBoxFor(model => model.Phone, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "user_phone" })
-                </div>
-                <div class="f0rm-gr0up">
-                    <label for="user_name">Name</label><br />
-                    @Html.TextBoxFor(model => model.Name, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "user_name" })
-                </div>
-                <div class="f0rm-gr0up">
-                    <label for="user_password">Password</label><br />
-                    @Html.TextBoxFor(model => model.Password, new { @class = "f0rm-c0ntr0l", @type = "password", @id = "user_password" })
-                </div>
-               
-                <div class="f0rm-gr0up">
-                    <input type="submit" name="commit" value="Signup" class="btn">
-                </div>
-            </div>
 
-         }
+        <div class="r0w">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+            {
+                <div class="f0rm-gr0up">
+                    <div class="f0rm-gr0up">
+                        <label for="user_email">Email Address</label><br />
+                        @Html.TextBoxFor(model => model.Email, new { @class = "f0rm-c0ntr0l", @type = "email", @id = "user_email" })
+                    </div>
+                    <div class="f0rm-gr0up">
+                        <label for="user_password">Phone</label><br />
+                        @Html.TextBoxFor(model => model.Phone, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "user_phone" })
+                    </div>
+                    <div class="f0rm-gr0up">
+                        <label for="user_name">Name</label><br />
+                        @Html.TextBoxFor(model => model.Name, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "user_name" })
+                    </div>
+                    <div class="f0rm-gr0up">
+                        <label for="user_password">Password</label><br />
+                        @Html.TextBoxFor(model => model.Password, new { @class = "f0rm-c0ntr0l", @type = "password", @id = "user_password" })
+                    </div>
+
+                    <div class="f0rm-gr0up">
+                        <input type="submit" name="commit" value="Signup" class="btn">
+                    </div>
+                </div>
+
+            }
         </div>
     </div>
     <div class="r3g1st3r-c0v3r">
         <div class="r3g1st3r-1m4g3">
-            <img src="~/Image/beautiful/photo-1523185682241-6f9b2b9e25f4.jpg" />
+            <img src="~/Image/Beautiful/23_200518_85446.jpg" />
         </div>
     </div>
 </div>

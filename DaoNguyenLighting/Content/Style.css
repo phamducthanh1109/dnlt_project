@@ -10,15 +10,50 @@ body {
 }
 
 img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     display:block;
     object-fit:cover;
+    overflow:hidden;
 }
 
 a {
     text-decoration:none;
+    color:black;
 }
+
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+th {
+    height: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+td {
+    height:100px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+    td img {
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
 /*HEADER**************************************************************************************************************************************************/
 
 .h34d3r {
@@ -93,6 +128,7 @@ a {
     margin: auto;
     margin-bottom:15px;
 }
+
 /* SEARCH */
 .s34rch {
     box-sizing: border-box;
@@ -150,39 +186,229 @@ a {
         color: black;
         text-decoration: none;
     }
-/*PRODUCT*********************************************************************************************************************************************/
+/*PRODUCT**********************************************************************************************************************************************/
+.pr0duct-b0dy {
+    box-sizing: border-box;
+    display: none;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: auto;
+    line-height: 24px;
+    text-size-adjust: 100%;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+.pr0duct-butt0n {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    float: right;
+    padding: 0px;
+    margin: 0px;
+    width: 50px;
+    height: 50px;
+}
+    .pr0duct-butt0n svg {
+        opacity: .8;
+    }
 
-.product-column1 {
+        .pr0duct-butt0n svg:hover {
+            opacity: initial;
+        }
+.pr0duct-c0nt41n3r {
+    position: fixed;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 7;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.pr0duct-c0v3r {
+    height: calc(100% - 20px);
+    margin: auto;
+    padding-top: 20px;
+    min-width:550px;
+}
+.pr0duct-c0nt3nt {
+    width: 100%;
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    min-width: 588px;
+}
+.pr0duct-c0nt3nt-wr4p {
+    width: 100%;
+    height: 100%;
+}
+/*************************************************************************************************************************************************************/
+.pr0duct-c0nt3nt-h34d3r{
+    height:60px;
+    width:100%;
+}
+.pr0duct-c0nt3nt-n4m3 {
+    width: 70%;
+    height: 100%;
+    float:left;
+}
+
+    .pr0duct-c0nt3nt-n4m3 h2 {
+        margin: 0px;
+        padding: 18px;
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    }
+.pr0duct-c0nt3nt-c4rt{
+    width:30%;
+    height:100%;
+    float:left;
+}
+
+/****************************************************************************************/
+.pr0duct-c0nt3nt-b0dy {
+    width:100%;
+    height:calc(100% - 118px);
+}
+.pr0duct-1mg-lvl1 {
+    height: calc(100% - 24px);
+    width: calc(100% - 32px);
+    padding: 12px 16px;
+}
+
+.pr0duct-1mg-lvl2 {
+    margin: auto;
+    cursor: zoom-in;
+}
+
+    .pr0duct-1mg-lvl2 img {
+        margin:auto;
+    }
+
+/****************************************************************************************/
+.pr0duct-c0nt3nt-f00t3r {
+    width: calc(100% - 24px);
+    height: 40px;
+    padding: 9px 12px;
+}
+/*Product-Detail***************************************************************************************/
+.pr0duct-d3t41l-b0dy {
+    width:100%;
+    height:600px;
+    border:2px solid black;
+}
+
+.pr0duct-d3t41l-c0v3r {
+    width:1000px;
+    height:500px;
+    margin:auto;
+    padding-top:50px;
+}
+.pr0duct-d3t41l-1m4g3 {
+    height:498px;
+    width:498px;
+    float:left;
+    border:1px solid black;
+}
+.pr0duct-d3t41l-1m4g3-lvl1 {
+    height:calc(100% - 40px);
+    width:calc(100% - 40px);
+    padding:20px;
+}
+
+.pr0duct-d3t41l-c0nt3nt1 {
+    height:460px;
+    width:calc(50% - 40px);
+    float:left;
+    padding:20px;
+}
+.pr1s3 {
+    width: 100%;
+    height: 50px;
+    margin-bottom:10px;
+    border-bottom:1px solid black;
+}
+    .pr1s3 p {
+        line-height:50px;
+        margin: 0px;
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+    }
+.n4m3 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+    .n4m3 p {
+        line-height: 40px;
+        margin: 0px;
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+.c0nt3nt {
+    padding:10px;
+    width: calc(100% - 20px);
+    height: 270px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.c4rt {
+    width:100%;
+    height:60px;
+}
+/*CART*************************************************************************************************************************************************/
+.c4rt-m3ss4g3{
+    width:300px;
+    height:50px;
+    background-color:black;
+    border-radius:5px;
+}
+    .c4rt-m3ss4g3 p {
+        line-height: 50px;
+        margin: 0px;
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color:white;
+        text-align:center;
+    }
+
+/*TRENDING*********************************************************************************************************************************************/
+.tr3nd1ng-b0dy {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+.tr3nd1ng-c0lumn {
     background-color: white;
     width: calc(33.33% - 16px);
     height: 100%;
-    margin-right: 12px;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-right:24px;
 }
 
-.product-column2 {
-    background-color: white;
-    width: calc(33.33% - 16px);
-    height: 100%;
-    margin: 0px 12px 0px 12px;
-    float: left;
-}
-
-.product-column3 {
-    background-color: white;
-    width: calc(33.33% - 16px);
-    height: 100%;
-    margin-left: 12px;
-    float: left;
-}
-.product-cover {
+.tr3nd1ng-c0v3r {
     padding-bottom: 24px;
 }
 
-.product-img {
-    border:1px solid black;
+.tr3nd1ng-1mg{
+    border: 1px solid black;
     border-radius: 5px;
     overflow: hidden;
+    cursor:pointer;
 }
 
 /*USER***************************************************************************************************************************************************/
@@ -292,4 +518,11 @@ a {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
     font-size: 17px;
     text-align: center;
+}
+
+/*PAY*/
+.pay-body {
+    width:100%;
+    height:600px;
+    background-color:red;
 }

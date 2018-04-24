@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/Content/Style.css" rel="stylesheet" />
+    <script src="~/Scripts/LayoutScript.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+
 </head>
-<body>
+<body id="body" >
     <header class="h34d3r">
         <nav class="n4v-h34d3r">
             <a href="/">
@@ -21,38 +24,82 @@
             </div>
 
             <div class="h34d3r-0pt10n1">
-                <div class="sh4p3">
-                    <div class="t3xt">Collections</div>
-                </div>
+                <a href="@Url.Action("Collection","Home")">
+                    <div class="sh4p3">
+                        <div class="t3xt">Collections</div>
+                    </div>
+                </a>           
             </div>
             <div class="h34d3r-0pt10n1">
-                <a href="@Url.Action("Login","Account")">
+                <a id="lg" href="@Url.Action("Login","Account")">
                     <div class="sh4p3">
-                        <div class="t3xt">Login</div>
+                        <div class="t3xt" id="lgval">Login</div>
                     </div>
                 </a>
             </div>
             <div class="h34d3r-0pt10n1">
-                <div class="sh4p3">
-                    <div class="t3xt">Cart</div>
-                </div>
+                <a href="@Url.Action("Cart","Cart")">
+                    <div class="sh4p3">
+                        <div class="t3xt">Cart</div>
+                    </div>
+                </a>
             </div>
             <div class="h34d3r-0pt10n1">
-                <div class="sh4p3">
-                    <div class="t3xt">Setting</div>
-                </div>
+                <a href="@Url.Action("Pay","Cart")">
+                    <div class="sh4p3">
+                        <div class="t3xt">Pay</div>
+                    </div>
+                </a>
             </div>
 
         </nav>
     </header>
     <div class="gl0b4l-b0dy">
-        <div class="m3nu-b4r">
-            <div class="m3nu-b4r-sp4n">
-                <div class="m3nu-b4r-c0nt3nt">@Html.ActionLink("Trending", "Trending", "Home")</div>
-                <div class="m3nu-b4r-c0nt3nt">@Html.ActionLink("New", "New", "Home")</div>
-            </div>
-        </div>
+       
         @RenderBody()
+
+      
     </div>
 </body>
 </html>
+
+<script>
+    @if (Session["UserID"] == null)
+    {
+        <text>
+         $("#lg").attr("href", "/Account/Login")
+         $("#lgval").text("Login")
+        </text>
+    }
+    else
+    {
+
+        <text>
+        $("#lg").attr("href", "/Account/Logout")
+        $("#lgval").text("Logout")
+        </text>
+    }
+    var lct = top.location.pathname
+    if (top.location.pathname === '/Home/Product' || top.location.pathname === '/') {
+        Load_Image_Database();
+    }
+    else if (lct.slice(0,19) === '/Home/ProductDetail') {
+        Show_Product_Detail();
+        Zoom_Image();
+        Auto_Edit_Padding_Product();
+        Auto_Edit_Margin_Product_Detail()
+        $(document).keyup(function (e) {
+            if (e.keyCode == 27) { Hide_Product(); }
+        });
+    }
+
+    $(window).resize(function () {
+        if (top.location.pathname === '/Home/Product' || top.location.pathname === '/') {
+            Load_Image_Database();
+        }
+        else if (lct.slice(0,19) === '/Home/ProductDetail') {
+            Auto_Edit_Padding_Product();
+            Show_Product_Detail();
+        }
+    });
+</script>

@@ -1,0 +1,67 @@
+﻿@model List<DaoNguyenLighting.Models.Product>
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="m4n4g3r-h34d3r">
+    <div class="m4n4g3r-h34d3r-n4m3">
+        <p>Products</p>
+    </div>
+    <div class="pr0duct-butt0n-c0v3r">
+        <a href="@Url.Action("AddProduct","Manage")">
+            <div class="pr0duct-butt0n-4dd ">
+                <p>Add Product</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Product Code</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Content</th>
+        <th>Amount</th>
+        <th>View</th>
+        <th>Date</th>
+        <th>Option</th>
+    </tr>
+
+@for (int i = 0; i < Model.Count(); i++) {
+    <tr>
+        <td>
+           <img src='@Model[i].ImagePath' /> 
+        </td>
+        <td>
+            @Model[i].ProductCode
+        </td>
+        <td>
+            @Model[i].ProductName
+        </td>
+        <td>
+            @Model[i].ProductPrice
+        </td>
+        <td>
+            @Model[i].ProductContent
+        </td>
+        <td>
+            @Model[i].ProductAmount
+        </td>
+        <td>
+            @Model[i].Views
+        </td>
+        <td>
+            @Model[i].Date
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditProduct", new { id = Model[i].ProductID })|
+            @Html.ActionLink("Delete", "Delete", new { id = Model[i].ProductID })
+        </td>
+    </tr>
+}
+
+</table>

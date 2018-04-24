@@ -1,7 +1,73 @@
-﻿
+﻿@model List<DaoNguyenLighting.Models.Product>
+
 @{
     ViewBag.Title = "Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Product</h2>
+
+<div class="tr3nd1ng-b0dy"></div>
+
+<script>
+    function Load_Image_Database()
+    {
+        w = window.innerWidth;
+        s = screen.width;
+        @{var count = Model.Count();}
+
+        if (w/s >= 0.8) {
+            $(".tr3nd1ng-c0lumn").remove();
+
+            @for (int j = 0; j <= 2; j++)
+            {
+                 <text>$(".tr3nd1ng-b0dy").append("<div class='tr3nd1ng-c0lumn' id='tc-@j'></div>")</text>;
+                 for (int i = (7 * j) ; i < 7 * (j + 1) ; i++)
+                 {
+                    <text>
+                    $("#tc-@j").append("<div class='tr3nd1ng-c0v3r'><div class='tr3nd1ng-1mg'> <a href='@Url.Action("ProductDetail","Home", new { id = Model[i].ProductID })'><img src = '@Model[i].ImagePath' id = '@Model[i].ProductID' /></a></div></div>")
+                    </Text>
+                 }
+            }
+            $("#tc-2").css({ "margin-right": "0px" })
+        }
+        else if (w/s >= 0.6) {
+            $(".tr3nd1ng-c0lumn").remove();
+
+             @for (int j = 0; j <= 1; j++)
+            {
+                 <text>$(".tr3nd1ng-b0dy").append("<div class='tr3nd1ng-c0lumn' id='tc-@j'></div>")</text>;
+                 for (int i = (7 * j); i < 7 * (j + 1); i++)
+                 {
+                    <text>
+                    $("#tc-@j").append("<div class='tr3nd1ng-c0v3r'><div class='tr3nd1ng-1mg'> <a href='@Url.Action("ProductDetail","Home", new { id = Model[i].ProductID })'><img src = '@Model[i].ImagePath' id = '@Model[i].ProductID' /></a></div></div>")
+                    </Text>
+                 }
+            }
+            $("#tc-1").css({ "margin-right": "0px" })
+            $(".tr3nd1ng-c0lumn").css({ "width": "calc(50% - 16px)" });
+        }
+        else if (w/s >= 0.4) {
+            $(".tr3nd1ng-c0lumn").remove();
+
+             @for (int j = 0; j <= 0; j++)
+            {
+                 <text>$(".tr3nd1ng-b0dy").append("<div class='tr3nd1ng-c0lumn' id='tc-@j'></div>")</text>;
+                 for (int i = (count * j); i < count * (j + 1); i++)
+                 {
+                    <text>
+                    $("#tc-@j").append("<div class='tr3nd1ng-c0v3r'><div class='tr3nd1ng-1mg'> <a href='@Url.Action("ProductDetail","Home", new { id = Model[i].ProductID })'><img src = '@Model[i].ImagePath' id = '@Model[i].ProductID' /></a></div></div>")
+                    </Text>
+                 }
+            }
+            $("#tc-0").css({ "margin-right": "0px" })
+            $(".tr3nd1ng-c0lumn").css({ "width": "calc(100%)" });
+            $(".tr3nd1ng-c0lumn").css({ "min-width": "558px" })
+        }
+
+
+    }
+
+
+</script>
+

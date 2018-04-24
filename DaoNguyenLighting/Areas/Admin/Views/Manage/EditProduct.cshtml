@@ -1,0 +1,68 @@
+﻿@model DaoNguyenLighting.Models.Product
+
+@{
+    ViewBag.Title = "Edit Product";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="m4n4g3r-h34d3r">
+    <div class="m4n4g3r-h34d3r-n4m3">
+        <p>Edit Product</p>
+    </div>
+</div>
+
+@using (Html.BeginForm("EditProduct", "Manage", FormMethod.Post))
+{
+    <div class="f0rm-h0r1z0n4l">
+        <div class="pr0duct-3d1t-1">
+            <div class="f0rm-gr0up">
+                <div class="f0rm-gr0up">
+                    <label for="image_path">Image Path</label><br />
+                    @Html.TextBoxFor(model => model.ImagePath, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "image_path" })
+                </div>
+            </div>
+
+            <div class="f0rm-gr0up">
+                <div class="f0rm-gr0up">
+                    <label for="product_code">Product Code</label><br />
+                    @Html.TextBoxFor(model => model.ProductCode, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "product_code" })
+                </div>
+            </div>
+
+            <div class="f0rm-gr0up">
+                <div class="f0rm-gr0up">
+                    <label for="product_name">Product Name</label><br />
+                    @Html.TextBoxFor(model => model.ProductName, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "product_name" })
+                </div>
+            </div>
+
+            <div class="f0rm-gr0up">
+                <div class="f0rm-gr0up">
+                    <label for="product_price">Product Price</label><br />
+                    @Html.TextBoxFor(model => model.ProductPrice, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "product_price" })
+                </div>
+            </div>
+
+            <div class="f0rm-gr0up">
+                <div class="f0rm-gr0up">
+                    <label for="product_amount">Product Amount</label><br />
+                    @Html.TextBoxFor(model => model.ProductAmount, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "product_amount" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.TextAreaFor(model => model.ProductContent, new { @class = "form-control" })
+        </div>
+
+        <div class="f0rm-gr0up">
+            <input type="submit" value="Save" class="btn" />
+        </div>
+    </div>
+
+}
+
+
+<script>
+    CKEDITOR.replace('ProductContent');
+</script>

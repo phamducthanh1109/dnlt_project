@@ -11,23 +11,23 @@ namespace DaoNguyenLighting.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class User
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
+        {
+            this.Orders = new HashSet<Order>();
+        }
+    
         public int UserID { get; set; }
-
-        //[Required(ErrorMessage ="Please enter email",AllowEmptyStrings = false)]
         public string Email { get; set; }
-
-        //[Required(ErrorMessage = "Please enter password", AllowEmptyStrings = false)]
-        //[StringLength(100, ErrorMessage = "Password should be atleast 8 characters", MinimumLength = 8)]
         public string Password { get; set; }
-        
-        //[Required(ErrorMessage = "Please enter your name", AllowEmptyStrings = false)]
         public string Name { get; set; }
-
-        //[Required(ErrorMessage = "Please enter your phone number", AllowEmptyStrings = false)]
         public string Phone { get; set; }
+        public string Address { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

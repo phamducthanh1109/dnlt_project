@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<link href="~/Content/Style.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+@model DaoNguyenLighting.Models.Admin
+
+<div class="c0nt41n3r l0g1n">
+    <a href="/">
+        <div class="l0g02">
+            <div class="l0g0-c0nt3nt lgct1"> <p>Dao Nguyen</p></div>
+            <div class="l0g0-c0nt3nt lgct2"> <p>Lighting</p></div>
+        </div>
+    </a>
+    <div class="r0w">
+        @using (Html.BeginForm("Autherize", "Login", FormMethod.Post))
+        {
+            <div class="f0rm-gr0up">
+                <label for="admin_name">Name</label><br />
+                @Html.TextBoxFor(model => model.Name, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "admin_name" })
+            </div>
+            <div class="f0rm-gr0up">
+                <label for="admin_password">Password </label><br />
+                @Html.TextBoxFor(model => model.Password, new { @class = "f0rm-c0ntr0l", @type = "password", @id = "admin_password" })
+            </div>
+            <div class="f0rm-gr0up">
+                <input type="submit" name="commit" value="Login" class="btn" onclick="Login()">
+            </div>
+        }
+        <p class="f00t3r">
+            @ViewBag.Message
+        </p>
+    </div>
+</div>
+<!--
+<script>
+    function Login() {
+        var data = $("#login-form").serialize();
+        $.ajax({
+            type: "post",
+            url: "/Account/Autherize",
+            data: data,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (result) {
+                alert(result)
+            }
+        });
+    }
+
+</script>
+    -->

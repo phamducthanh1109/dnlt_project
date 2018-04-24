@@ -1,0 +1,61 @@
+﻿@model DaoNguyenLighting.Models.Cash
+@{
+    ViewBag.Title = "AddCash";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="m4n4g3r-h34d3r">
+    <div class="m4n4g3r-h34d3r-n4m3">
+        <p>Add Cash</p>
+    </div>
+</div>
+
+@using (Html.BeginForm("AddCash", "Cash", FormMethod.Post))
+{
+<div class="m4n4g3r-c0v3r">
+    <div class="m4n4g3r-c0v3r-2">
+        <div class="c4sh-4dd-c0nt3nt ">
+            <div class="f0rm-gr0up">
+                <label for="cash_code">Cash Code</label><br />
+                @Html.TextBoxFor(model => model.CashCode, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "cash_code" })
+            </div>
+            <div class="f0rm-gr0up">
+                <div class="f0rm-gr0up">
+                    <label for="cash_activity">Activity</label><br />
+                    @Html.TextBoxFor(model => model.Activity, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "cash_activity" })
+                </div>
+            </div>
+            <div class="f0rm-gr0up">
+                <label for="cash">Cash</label><br />
+                @Html.TextBoxFor(model => model.Cashes, new { @class = "f0rm-c0ntr0l", @type = "number", @id = "cash" })
+            </div>
+            <div class="f0rm-gr0up">
+                <label for="cash_staff">Staff</label><br />
+                @Html.TextBoxFor(model => model.Staff, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "cash_staff" })
+            </div>
+            <div class="f0rm-gr0up">
+                <label for="cash_Co_Re">Collector/Reciever</label><br />
+                @Html.TextBoxFor(model => model.CollectorOrReceiver, new { @class = "f0rm-c0ntr0l", @type = "text", @id = "cash_Co_Re" })
+            </div>
+            @ViewBag.message
+            Get @Html.RadioButtonFor(model => model.Gender, "Get", new {@checked = "checked"})
+            Pay @Html.RadioButtonFor(model => model.Gender, "Pay")
+
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        @Html.TextAreaFor(model => model.Contents, new { @class = "form-control" })
+    </div>
+
+    <input type="submit" name="commit" value="Add" class="btn">
+
+
+</div>
+
+}
+
+<script>
+    CKEDITOR.replace('Contents');
+</script>

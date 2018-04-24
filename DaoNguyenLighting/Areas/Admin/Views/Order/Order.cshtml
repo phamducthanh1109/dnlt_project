@@ -1,0 +1,57 @@
+﻿@model List<DaoNguyenLighting.Models.Order>
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="m4n4g3r-h34d3r">
+    <div class="m4n4g3r-h34d3r-n4m3">
+        <p>Orders</p>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>User Name</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Order Total</th>
+        <th>Option</th>
+    </tr>
+    @{dynamic color = null;}
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        if (Model[i].Status == "Processing")
+        {
+            color = "background-color:lightcoral";
+        }
+        else
+        {
+            color = "background-color:none";
+        }
+        <tr style= "@color">
+            <td>
+                @Model[i].OrderID
+            </td>
+            <td>
+                @Model[i].Name
+            </td>
+            <td>
+                @Model[i].Status
+            </td>
+            <td>
+                @Model[i].Date
+            </td>
+            <td>
+                @Model[i].OrderTotal
+            </td>
+            <td>
+                @Html.ActionLink("Detail", "OrderDetail", new { OrderID = Model[i].OrderID, UserID = Model[i].UserID }, null)
+            </td>
+        </tr>
+    }
+
+
+</table>

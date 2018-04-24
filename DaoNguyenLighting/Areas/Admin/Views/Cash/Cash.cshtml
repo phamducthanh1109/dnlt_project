@@ -1,0 +1,57 @@
+﻿@model List<DaoNguyenLighting.Models.Cash>
+@{
+    ViewBag.Title = "Cash";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="m4n4g3r-h34d3r">
+    <div class="m4n4g3r-h34d3r-n4m3">
+        <p>Cash</p>
+    </div>
+    <div class="pr0duct-butt0n-c0v3r">
+        <a href="@Url.Action("AddCash","Cash")">
+            <div class="pr0duct-butt0n-4dd ">
+                <p>Add Cash</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>Cash Code</th>
+        <th>Date</th>
+        <th>Activity</th>
+        <th>Staff</th>
+        <th>Collector/Reciever</th>
+        <th>Cash</th>
+        <th>Content</th>
+    </tr>
+
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+    <tr>
+        <td>
+            @Model[i].CashCode
+        </td>
+        <td>
+            @Model[i].Date
+        </td>
+        <td>
+            @Model[i].Activity
+        </td>
+        <td>
+            @Model[i].Staff
+        </td>
+        <td>
+            @Model[i].CollectorOrReceiver
+        <td>
+            @Model[i].Cashes
+        </td>
+        <td>
+            @Model[i].Contents
+        </td>
+    </tr>
+    }
+
+</table>

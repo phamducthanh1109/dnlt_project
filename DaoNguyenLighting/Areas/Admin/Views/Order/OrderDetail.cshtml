@@ -1,0 +1,101 @@
+﻿@model DaoNguyenLighting.Models.MergeModel
+@{
+    ViewBag.Title = "OrderDetail";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    int oID = Convert.ToInt32(Request.QueryString["OrderID"]);
+    int uID = Convert.ToInt32(Request.QueryString["UserID"]);
+}
+
+<h2>Order Detail</h2>
+<a href="@Url.Action("ExportToExcel","Order", new { OrderID = oID, UserID = uID})">Export Excel</a>
+
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>Name Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+    </tr>
+
+
+    @for (int i = 0; i < Model.OrderDetailList.Count(); i++)
+    {
+        <tr>
+            <td>
+                @(i + 1)
+            </td>
+            <td>
+                @Model.OrderDetailList[i].NameProduct
+            </td>
+            <td>
+                @Model.OrderDetailList[i].Quantity
+            </td>
+            <td>
+                @Model.OrderDetailList[i].Price
+            </td>
+            <td>
+                @(String.Format("{0:N0}", Model.OrderDetailList[i].Price * Model.OrderDetailList[i].Quantity))
+            </td>
+        </tr>
+
+    }
+    <tr>
+        <td colspan="4">
+        </td>
+        <td>
+            @{
+                var total = String.Format("{0:N0}", Model.OrderDetailList.Sum(x => x.Quantity * x.Price));
+            }
+            @total VNĐ
+        </td>
+    </tr>
+</table>
+
+<div class="Us3r-0rd3r-b0dy">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Option</th>
+        </tr>
+        <tr>
+            <td>
+                @Model.UserList.Name
+            </td>
+            <td>
+                @Model.UserList.Email
+            </td>
+            <td>
+                @Model.UserList.Address
+            </td>
+            <td>
+                @Model.UserList.Phone
+            </td>
+            @using (Html.BeginForm("OrderDetail","Order", FormMethod.Post))
+            {
+            <td>
+                @Html.HiddenFor(x => x.OrderList.OrderID)
+                @Model.OrderList.Status
+            </td>
+            <td>
+                @if (Model.OrderList.Status == "Complete")
+                {
+                    <input type="submit" value="Uncheck" />      
+                }
+                else
+                {
+                    <input type="submit" value="Check" />
+                }
+                
+            </td>
+            }
+        </tr>
+    </table>
+</div>
